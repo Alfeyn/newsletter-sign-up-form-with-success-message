@@ -1,0 +1,217 @@
+@import 'color';
+@import 'mixins';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // overflow: hidden;
+
+    @include desktop {
+        background-color: $Dark-Slate-Grey;
+    }
+
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .form-container {
+            @include desktop {
+                padding: 20px;
+                width: 50rem;
+                height: 70vh;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                background-color: $White;
+                border-radius: 10px;
+                margin-top: 4rem;
+                margin-bottom: 4rem;
+            }
+
+            &.hide {
+                display: none;
+            }
+
+            .form-decor {
+
+                @include desktop {
+                    width: 40%;
+                    height: 100%;
+                    background: url('./../images/illustration-sign-up-desktop.svg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 12px;
+                    margin-left: 5%;
+                }
+
+                img {
+                    width: 100%;
+
+                    &.image-mobile {
+                        @include desktop {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+
+            .form-content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+
+                @include desktop {
+                    width: 50%;
+                }
+
+                .title {
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    font-style: normal;
+
+                    @include desktop {
+                        font-size: 2rem;
+                    }
+                }
+
+                .list {
+                    list-style: url('./../images/icon-list.svg');
+                    margin-bottom: 20px;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+
+                .form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .label {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        label,
+                        span {
+                            font-size: 0.8rem;
+                        }
+
+                        .error {
+                            color: $Tomato;
+                        }
+                    }
+
+                    input {
+                        width: 85%;
+                        margin-bottom: 10px;
+                        height: 50px;
+                        padding: 0px 20px;
+                        border-radius: 8px;
+                        border: 1px solid $Grey;
+                        outline: none;
+
+                        @include desktop {
+                            width: 88%;
+                        }
+
+                        &:focus {
+                            border: 1px solid $Dark-Slate-Grey;
+
+                        }
+
+                        &.error {
+                            border: 1px solid $Tomato;
+                            color: tomato;
+                        }
+
+                        &.btn {
+                            width: 100%;
+                            border: none;
+                            background-color: $Dark-Slate-Grey;
+                            color: $White;
+
+                            &:hover, &:focus {
+                                background-color: $Tomato;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .success-message {
+            display: none;
+
+
+            &.show {
+                height: 70vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 30px;
+                margin-top: 20vh;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+
+                .title {
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                border: none;
+                background-color: $Dark-Slate-Grey;
+                color: $White;
+                height: 50px;
+                border-radius: 8px;
+
+                &:hover, &:focus {
+                    background-color: $Tomato;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+
+        @include desktop {
+            color: $White;
+
+        }
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}

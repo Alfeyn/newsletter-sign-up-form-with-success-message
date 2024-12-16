@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: hsl(234, 29%, 20%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 48rem) {
+  body {
+    background-color: hsl(234, 29%, 20%);
+  }
+}
+body .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 48rem) {
+  body .main-container .form-container {
+    padding: 20px;
+    width: 50rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+body .main-container .form-container.hide {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  body .main-container .form-container .form-decor {
+    width: 40%;
+    height: 100%;
+    background: url("./../images/illustration-sign-up-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    margin-left: 5%;
+  }
+}
+body .main-container .form-container .form-decor img {
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  body .main-container .form-container .form-decor img.image-mobile {
+    display: none;
+  }
+}
+body .main-container .form-container .form-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+@media screen and (min-width: 48rem) {
+  body .main-container .form-container .form-content {
+    width: 50%;
+  }
+}
+body .main-container .form-container .form-content .title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (min-width: 48rem) {
+  body .main-container .form-container .form-content .title {
+    font-size: 2rem;
+  }
+}
+body .main-container .form-container .form-content .list {
+  list-style: url("./../images/icon-list.svg");
+  margin-bottom: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .main-container .form-container .form-content .list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .main-container .form-container .form-content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .main-container .form-container .form-content .form .label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .main-container .form-container .form-content .form .label label,
+body .main-container .form-container .form-content .form .label span {
+  font-size: 0.8rem;
+}
+body .main-container .form-container .form-content .form .label .error {
+  color: hsl(4, 100%, 67%);
+}
+body .main-container .form-container .form-content .form input {
+  width: 85%;
+  margin-bottom: 10px;
+  height: 50px;
+  padding: 0px 20px;
+  border-radius: 8px;
+  border: 1px solid hsl(231, 7%, 60%);
+  outline: none;
+}
+@media screen and (min-width: 48rem) {
+  body .main-container .form-container .form-content .form input {
+    width: 88%;
+  }
+}
+body .main-container .form-container .form-content .form input:focus {
+  border: 1px solid hsl(234, 29%, 20%);
+}
+body .main-container .form-container .form-content .form input.error {
+  border: 1px solid hsl(4, 100%, 67%);
+  color: tomato;
+}
+body .main-container .form-container .form-content .form input.btn {
+  width: 100%;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+}
+body .main-container .form-container .form-content .form input.btn:hover, body .main-container .form-container .form-content .form input.btn:focus {
+  background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+body .main-container .success-message {
+  display: none;
+}
+body .main-container .success-message.show {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  margin-top: 20vh;
+}
+body .main-container .success-message .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+body .main-container .success-message .content .title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-style: normal;
+}
+body .main-container .success-message .btn {
+  width: 100%;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  height: 50px;
+  border-radius: 8px;
+}
+body .main-container .success-message .btn:hover, body .main-container .success-message .btn:focus {
+  background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  body .attribution {
+    color: hsl(0, 0%, 100%);
+  }
+}
+body .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
