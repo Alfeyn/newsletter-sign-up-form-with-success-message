@@ -31,8 +31,6 @@ body .main-container {
 @media screen and (min-width: 48rem) {
   body .main-container .form-container {
     padding: 20px;
-    width: 50rem;
-    height: 70vh;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -47,7 +45,7 @@ body .main-container .form-container.hide {
 }
 @media screen and (min-width: 48rem) {
   body .main-container .form-container .form-decor {
-    width: 40%;
+    width: 20rem;
     height: 100%;
     background: url("./../images/illustration-sign-up-desktop.svg");
     background-size: cover;

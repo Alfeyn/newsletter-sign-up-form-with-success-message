@@ -24,8 +24,6 @@ body {
         .form-container {
             @include desktop {
                 padding: 20px;
-                width: 50rem;
-                height: 70vh;
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
@@ -42,7 +40,7 @@ body {
             .form-decor {
 
                 @include desktop {
-                    width: 40%;
+                    width: 20rem;
                     height: 100%;
                     background: url('./../images/illustration-sign-up-desktop.svg');
                     background-size: cover;
